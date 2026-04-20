@@ -64,6 +64,7 @@ Restaurante parseRestaurante(char *linha){
         i++;
         partes[i] = strtok(NULL, ",");
     }
+    // outras
      r.id = atoi(partes[0]);
     strcpy(r.nome, partes[1]);
     strcpy(r.cidade, partes[2]);
@@ -85,9 +86,9 @@ Restaurante parseRestaurante(char *linha){
     char *h1 = strtok(partes[7], "-");
     char *h2 = strtok(NULL, "-");
 
+    //data
     r.horarioAbertura = parseHora(h1);
     r.horarioFechamento = parseHora(h2);
-    // data
     r.dataAbertura = parseData(partes[8]);
 
     // aberto
